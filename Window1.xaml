@@ -1,0 +1,80 @@
+﻿<Window x:Class="DateBaseGUI.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Program" Height="600" Width="600" MinHeight="600" MinWidth="600">
+    
+    <DockPanel>
+            <StackPanel DockPanel.Dock="Top" Orientation="Vertical">
+                <Menu>
+                    <MenuItem Header="File">
+                        <MenuItem Header="Создать"/>
+                        <MenuItem Header="Открыть"/>
+                        <MenuItem Header="Сохранить"/>
+                        <Separator/>
+                        <MenuItem Header="Выход"/>
+                    </MenuItem>
+                    <MenuItem Header="Info"/>
+                </Menu>
+           
+        </StackPanel>
+        <Grid HorizontalAlignment="Stretch" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                
+                <RowDefinition Height="146.215*" />
+            </Grid.RowDefinitions>
+            <ToolBarTray HorizontalAlignment="Stretch" Grid.Row="0">
+            <ToolBar Band="0" VerticalAlignment="Top" HorizontalContentAlignment="Stretch">
+                <TextBox Margin="0,0,5,0" Width="150"/>
+                <Button Content="Поиск" Margin="0,0,5,0"/> 
+                <Button Content="Список" Margin="0,0,5,0"/> <!--Image source-->
+                <Button Content="Редактировать" Margin="0,0,5,0"/>
+                    <Separator/>
+                </ToolBar>
+                
+            </ToolBarTray>
+            
+            <DockPanel Grid.Row="1" Margin="0,5">
+                <StackPanel Orientation="Vertical">            
+                    <StackPanel Orientation="Horizontal">
+                    <TextBox Text="Имя" Width="100" Margin="1,0"/>
+                    <TextBox Text="Фамилия" Width="100" Margin="1,0"/>
+                    <TextBox Text="Паспорт" Width="100" Margin="1,0"/>
+                    <Button Content="Фото" Width="50" Margin="1,0" />
+                    <Button Content="Добавить" Margin="1,0"/>
+                     <Button Content="Удалить" Margin="1,0"/>
+                    </StackPanel>
+                    <TextBox Text="Комментарий" Height="150" Margin="0,5,0,0"/>
+                    <Separator/>
+             </StackPanel>
+                
+            </DockPanel>
+            <DockPanel Grid.Row="2">
+                <StackPanel>
+                <Grid Margin="0,5" Height="Auto" Width="Auto" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Height="150" Width="150" Margin="70,0"/>
+                        
+                        <DockPanel Grid.Column="1">
+                            <StackPanel>
+                            <TextBlock HorizontalAlignment="Stretch" Height="30" Margin="5,5"/>
+                            <TextBlock HorizontalAlignment="Stretch" Height="30" Margin="5,5"/>
+                            <TextBlock HorizontalAlignment="Stretch" Height="30" Margin="5,5"/>
+                          </StackPanel>
+                        </DockPanel>
+                    </Grid>
+                    <Separator/>
+                </StackPanel>
+            </DockPanel>
+           
+                <TextBlock Grid.Row="3" VerticalAlignment="Stretch"  Width="Auto" Margin="0,5"/>
+                
+            
+        </Grid>
+     </DockPanel>
+</Window>
